@@ -1,12 +1,14 @@
 from click.testing import CliRunner
 from src.cli import calculate
 
+
 def test_add_command():
     """Test add command"""
     runner = CliRunner()
     result = runner.invoke(calculate, ["add", "5", "3"])
     assert result.exit_code == 0
     assert result.output.strip() == "8"
+
 
 def test_subtract_command():
     """Test sub command"""
@@ -15,6 +17,7 @@ def test_subtract_command():
     assert result.exit_code == 0
     assert result.output.strip() == "6"
 
+
 def test_multiply_command():
     """Test mul command"""
     runner = CliRunner()
@@ -22,12 +25,14 @@ def test_multiply_command():
     assert result.exit_code == 0
     assert result.output.strip() == "14"
 
+
 def test_divide_command():
     """Test div command"""
     runner = CliRunner()
     result = runner.invoke(calculate, ["divide", "10", "2"])
     assert result.exit_code == 0
     assert result.output.strip() == "5"
+
 
 def test_square_root_command():
     """Test sqr command"""
@@ -64,8 +69,9 @@ def test_square_root_negative():
 def test_unexpected_error(monkeypatch):
     """Test unexp command"""
     runner = CliRunner()
-    monkeypatch.setattr("src.cli.add", 
-                        lambda x, y: (_ for _ in ()).throw(Exception("Random error")))
+    monkeypatch.setattr(
+        "src.cli.add", lambda x, y: (_ for _ in ()).throw(Exception("Random error"))
+    )
     result = runner.invoke(calculate, ["add", "2", "3"])
     assert result.exit_code != 0
     assert "Unexpected error" in result.output
