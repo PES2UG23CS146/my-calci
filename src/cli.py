@@ -7,14 +7,12 @@ import sys
 import click
 from src.calculator import add, subtract, multiply, divide, power, square_root
 
-
 @click.command()
 @click.argument("operation")
 @click.argument("num1", type=float)
 @click.argument("num2", type=float, required=False)
 def calculate(operation, num1, num2=None):
     """Simple calculator CLI"""
-
     try:
         if operation == "add":
             result = add(num1, num2)
