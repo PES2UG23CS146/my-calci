@@ -6,14 +6,13 @@ import sys
 from src.calculator import power, square_root, add , multiply , divide
  
 class TestCLIIntegration:
-    """Test CLI application integrating with
-calculator module"""
+    """Test CLI application integrating with calculator module"""
      
     def run_cli(self, *args):
         """Helper method to run CLI and capture
 output"""
         cmd = [sys.executable, "-m",'src.cli'] + list(args)
-        result = subprocess.run(cmd, capture_output=True, text=True,check=True, cwd='.')
+        result = subprocess.run(cmd, capture_output=True, text=True,check=False, cwd='.')
         return result
      
     def test_cli_add_integration(self):
