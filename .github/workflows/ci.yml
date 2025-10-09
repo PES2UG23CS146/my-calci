@@ -110,7 +110,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint==3.3.8 astroid==3.3.11
 
- 
       - name: Run pylint and save report 
         run: | 
           echo "껳껱껲 Running pylint..." 
