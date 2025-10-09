@@ -3,7 +3,6 @@ Calculator Module - Basic arithmetic operations
 Students will extend this with more functions
 """
 
-
 def add(a, b):
     """Add two numbers together"""
     return a + b
@@ -22,11 +21,6 @@ def multiply(a, b):
 def divide(a, b):
     """Divide a by b"""
     return a / b
-
-    print(f"Dividing {a} ÷ {b}")  # Added logging
-    result = a / b
-    print(f"Result: {result}")
-    return result
 
 
 def power(a, b):
