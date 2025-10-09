@@ -1,0 +1,19 @@
+************* Module src.calculator
+src\calculator.py:14:19: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:16:16: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:17:0: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:18:17: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:20:16: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:21:0: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:27:16: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:29:17: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:31:19: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:33:13: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:34:75: C0303: Trailing whitespace (trailing-whitespace)
+src\calculator.py:42:0: C0304: Final newline missing (missing-final-newline)
+src\calculator.py:37:1: W0511: TODO: Students will add multiply, divide, power, sqrt functions (fixme)
+src\calculator.py:22:4: W0101: Unreachable code (unreachable)
+
+------------------------------------------------------------------
+Your code has been rated at 3.64/10 (previous run: 3.64/10, +0.00)
+
