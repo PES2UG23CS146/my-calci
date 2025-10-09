@@ -32,8 +32,11 @@ def calculate(operation, num1, num2=None):
             click.echo(f"Unknown operation: {operation}")
             sys.exit(1)
 
-        # 🔥 Print the result so tests can read stdout
-        click.echo(result)
+        # 🔥 Fix: print integers cleanly
+        if isinstance(result, float) and result.is_integer():
+            click.echo(str(int(result)))
+        else:
+            click.echo(str(result))
 
     except ZeroDivisionError:
         click.echo("Cannot divide by zero")
