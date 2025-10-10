@@ -3,38 +3,38 @@ Calculator Module - Basic arithmetic operations
 Students will extend this with more functions
 """
 
+
 def add(a, b):
     """Add two numbers together"""
     return a + b
+
 
 def subtract(a, b):
     """Subtract b from a"""
     return a - b
 
-def multiply(a, b): 
-    """Multiply two numbers""" 
-    return a * b 
- 
-def divide(a, b): 
-    """Divide a by b""" 
-    return a / b 
-    
-    print(f"Dividing {a} ÷ {b}")  # Added logging
-    result = a / b
-    print(f"Result: {result}")
-    return result
 
-def power(a, b): 
-    """Raise a to the power of b""" 
-    return a ** b 
+def multiply(a, b):
+    """Multiply two numbers"""
+    return a * b
 
-def square_root(a): 
-    """Calculate square root of a""" 
-    if a < 0: 
-        raise ValueError("Cannot calculate square root of negative number") 
-    return a ** 0.5
 
-# TODO: Students will add multiply, divide, power, sqrt functions
+def divide(a, b):
+    """Divide a by b"""
+    return a / b
+
+
+def power(a, b):
+    """Raise a to the power of b"""
+    return a**b
+
+
+def square_root(a):
+    """Calculate square root of a"""
+    if a < 0:
+        raise ValueError("Cannot calculate square root of negative number")
+    return a**0.5
+
 
 if __name__ == "__main__":
     print("🧮 Calculator Module")

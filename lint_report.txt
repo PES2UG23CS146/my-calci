@@ -1,0 +1,12 @@
+************* Module src.calculator
+src\calculator.py:26:4: W0101: Unreachable code (unreachable)
+************* Module src.cli
+src\cli.py:40:11: W0718: Catching too general exception Exception (broad-exception-caught)
+src\cli.py:46:4: E1120: No value for argument 'operation' in function call (no-value-for-parameter)
+src\cli.py:46:4: E1120: No value for argument 'num1' in function call (no-value-for-parameter)
+src\cli.py:8:0: W0611: Unused power imported from src.calculator (unused-import)
+src\cli.py:8:0: W0611: Unused square_root imported from src.calculator (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 7.08/10 (previous run: 7.08/10, +0.00)
+
