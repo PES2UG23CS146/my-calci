@@ -36,10 +36,13 @@ def calculate(operation, num1, num2=None):
         else:
             click.echo(f"{result:.2f}")
  
+    except ZeroDivisionError:
+        click.echo("Cannot divide by zero")
+        sys.exit(1)
     except ValueError as e:
         click.echo(f"Error: {e}")
         sys.exit(1)
-    except Exception as e:  # pylint: disable=broad-exception-caught
+    except Exception as e:
         click.echo(f"Unexpected error: {e}")
         sys.exit(1)
  
