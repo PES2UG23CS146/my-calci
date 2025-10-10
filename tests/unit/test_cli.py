@@ -65,7 +65,6 @@ def test_square_root_negative():
     assert result.exit_code != 0
     assert "Error" in result.output or "Cannot" in result.output
 
-
 def test_unexpected_error(monkeypatch):
     """Test unexp command"""
     runner = CliRunner()

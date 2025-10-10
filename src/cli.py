@@ -29,7 +29,6 @@ def calculate(operation, num1, num2=None):
         else:
             click.echo(f"Unknown operation: {operation}")
             sys.exit(1)
-
         # 🔥 Fix: print integers cleanly
         if isinstance(result, float) and result.is_integer():
             click.echo(str(int(result)))
@@ -45,7 +44,6 @@ def calculate(operation, num1, num2=None):
     except Exception as e:
         click.echo(f"Unexpected error: {e}")
         sys.exit(1)
-
 
 if __name__ == "__main__":
     calculate()
