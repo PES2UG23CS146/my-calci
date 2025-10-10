@@ -1,12 +1,12 @@
-"""
+""" 
 Command Line Interface for Calculator
 Example: python src/cli.py add 5 3
 """
-
+ 
 import sys
 import click
 from src.calculator import add, subtract, multiply, divide, power, square_root
-
+ 
 @click.command()
 @click.argument("operation")
 @click.argument("num1", type=float)
@@ -27,23 +27,21 @@ def calculate(operation, num1, num2=None):
         elif operation in ("square_root", "sqrt"):
             result = square_root(num1)
         else:
-            click.echo(f"Unknown operation: {operation}")
+            click.echo(f"Unknown operation:{operation}")
             sys.exit(1)
-        # 🔥 Fix: print integers cleanly
-        if isinstance(result, float) and result.is_integer():
-            click.echo(str(int(result)))
+ 
+        # Format result nicely 
+        if result == int(result):
+            click.echo(int(result))
         else:
-            click.echo(str(result))
-
-    except ZeroDivisionError:
-        click.echo("Cannot divide by zero")
-        sys.exit(1)
+            click.echo(f"{result:.2f}")
+ 
     except ValueError as e:
         click.echo(f"Error: {e}")
         sys.exit(1)
-    except Exception as e:
+    except Exception as e:  # pylint: disable=broad-exception-caught
         click.echo(f"Unexpected error: {e}")
         sys.exit(1)
-
+ 
 if __name__ == "__main__":
-    calculate()
+    calculate()  # pylint: disable=no-value-for-parameter
